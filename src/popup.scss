@@ -1,0 +1,126 @@
+$font-family: sans-serif;
+$font-size: 14px;
+$padding: 10px;
+$width: 300px;
+$border-color: #eee;
+$unread-bg: #f9f9f9;
+$error-color: red;
+$primary-color: #007bff;
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  padding: $padding;
+  width: $width;
+}
+
+header{
+  height: 48px;
+}
+
+.view {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+#message-list {
+  list-style: none;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+
+  li {
+    padding: 8px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: flex-start;
+
+    &.unread {
+      font-weight: bold;
+      background-color: $unread-bg;
+    }
+
+    input {
+      margin-right: 8px;
+      margin-top: 3px;
+      width: auto;
+    }
+  }
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.view-footer {
+  margin-top: 10px;
+  text-align: center;
+  border-top: 1px solid $border-color;
+  padding-top: 10px;
+}
+
+.error {
+  color: $error-color;
+  margin-top: 5px;
+}
+
+.controls {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+
+  &.active {
+    border-bottom: 2px solid $primary-color;
+    color: $primary-color;
+    font-weight: bold;
+  }
+}
+
+.tab-content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}

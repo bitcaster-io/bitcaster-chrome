@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Bitcaster Receiver",
+  "version": "1.0",
+  "description": "Displays messages sent from a remote server on the screen.",
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/content.js"
+      ]
+    }
+  ],
+   "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": "src/images/logos/bitcaster_16x16.png"
+  },
+  "icons": {
+    "16": "src/images/logos/bitcaster_16x16.png",
+    "32": "src/images/logos/bitcaster_32x32.png",
+    "48": "src/images/logos/bitcaster_48x48.png",
+    "128": "src/images/logos/bitcaster_128x128.png"
+  }
+}

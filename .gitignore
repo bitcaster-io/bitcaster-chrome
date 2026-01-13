@@ -1,0 +1,5 @@
+.*
+~*
+*.sh
+__pycache__/
+!.gitignore

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bitcaster Messages</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div>
+    <img style="width: 108px" src="images/logos/name.svg"/>
+</div>
+<!-- View for setting the URL -->
+<div id="settings-view" class="view active">
+    <h3>Login to Bitcaster</h3>
+
+    <label for="url">Server URL:</label>
+    <input type="text" id="url" placeholder="https://bitcaster.io">
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="creds">Credentials</button>
+        <button class="tab-btn" data-tab="token">API Token</button>
+    </div>
+
+    <div id="tab-creds" class="tab-content active">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Password">
+    </div>
+
+    <div id="tab-token" class="tab-content">
+        <label for="api-token">API Token:</label>
+        <input type="text" id="api-token" placeholder="Paste your API Token here">
+        <p style="font-size: 0.8em; color: #666;">Use this if you use SSO or have an API Key.</p>
+    </div>
+
+    <div class="button-group">
+        <button id="login-btn">Login & Test</button>
+        <button id="save-btn">Save Only</button>
+    </div>
+    <p id="settings-error" class="error"></p>
+</div>
+
+<!-- View for displaying messages -->
+<div id="messages-view" class="view">
+    <h3>Messages</h3>
+    <ul id="message-list"></ul>
+    <button id="visit-btn">Visit Console</button>
+    <button id="refresh-btn">Refresh</button>
+    <div class="view-footer">
+        <button id="settings-btn">Settings</button>
+    </div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
