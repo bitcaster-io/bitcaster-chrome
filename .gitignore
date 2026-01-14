@@ -1,5 +1,8 @@
 .*
 ~*
 *.sh
+*.pem
 __pycache__/
 !.gitignore
+*.crx
+*.zip

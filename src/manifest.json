@@ -12,7 +12,7 @@
     "https://*/*"
   ],
   "background": {
-    "service_worker": "src/background.js"
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
@@ -20,18 +20,18 @@
         "<all_urls>"
       ],
       "js": [
-        "src/content.js"
+        "content.js"
       ]
     }
   ],
    "action": {
-    "default_popup": "src/popup.html",
-    "default_icon": "src/images/logos/bitcaster_16x16.png"
+    "default_popup": "popup.html",
+    "default_icon": "images/logos/bitcaster_16x16.png"
   },
   "icons": {
-    "16": "src/images/logos/bitcaster_16x16.png",
-    "32": "src/images/logos/bitcaster_32x32.png",
-    "48": "src/images/logos/bitcaster_48x48.png",
-    "128": "src/images/logos/bitcaster_128x128.png"
+    "16": "images/logos/bitcaster_16x16.png",
+    "32": "images/logos/bitcaster_32x32.png",
+    "48": "images/logos/bitcaster_48x48.png",
+    "128": "images/logos/bitcaster_128x128.png"
   }
 }
